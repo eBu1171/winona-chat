@@ -7,7 +7,8 @@ import ChatRoom from './components/ChatRoom';
 // For debugging
 console.log('App component is loading...');
 
-const SOCKET_URL = 'http://localhost:3001';
+const SOCKET_URL = import.meta.env.VITE_SERVER_URL || 'https://winona-chat-server.onrender.com';
+console.log('Using socket server at:', SOCKET_URL);
 
 type ChatState = 'gender-selection' | 'waiting' | 'chatting';
 

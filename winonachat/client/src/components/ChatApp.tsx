@@ -4,7 +4,7 @@ import WaitingRoom from './WaitingRoom';
 import ChatRoom from './ChatRoom';
 
 // Connect to the server with additional configuration to handle CORS
-const socket = io('http://localhost:3001', {
+const socket = io(import.meta.env.VITE_SERVER_URL || 'https://winona-chat-server.onrender.com', {
     withCredentials: true,
     transports: ['websocket', 'polling']
 });
