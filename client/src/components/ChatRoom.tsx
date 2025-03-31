@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Socket } from 'socket.io-client';
+import io from 'socket.io-client';
 
 interface Message {
     sender: string;
